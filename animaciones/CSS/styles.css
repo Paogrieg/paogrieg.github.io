@@ -23,6 +23,9 @@ html, body{
     left: 250px;
     width: 200px;
     height: 200px;
+    animation-name: saltos;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 .barril{
     background-image: url('../img/barril.png');
@@ -40,4 +43,39 @@ html, body{
 }
 .barril-der{
     right: 250px;
+}
+.giroBarril{
+    animation-name: rotarBarril;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes rotarBarril{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(80deg);
+    }
+}
+@keyframes saltos{
+    0%{
+        top: -50px;
+    }
+    30%{
+        top: 300px;
+        left: 800px;
+    }
+    50%{
+        top: 700px;
+    }
+    80%{
+        right: 300px;
+        top: 400px;
+    }
+    100%{
+        right: 600px;
+        top: 800px;
+        transform: rotate(60deg);
+    }
 }
